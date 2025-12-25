@@ -182,15 +182,6 @@
             color: #fff;
         }
         
-        .package-card.featured .package-btn {
-            background: #fff;
-            color: #667eea;
-        }
-        
-        .package-card.featured .package-btn:hover {
-            background: #f0f0f0;
-        }
-        
         .popular-badge {
             position: absolute;
             top: -12px;
@@ -279,28 +270,6 @@
             line-height: 1.4;
         }
         
-        .package-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: #fff;
-            border: none;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: center;
-            text-decoration: none;
-        }
-        
-        .package-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-        
-        /* Monthly costs note */
         .monthly-note {
             margin-top: 15px;
             padding: 12px 15px;
@@ -316,7 +285,6 @@
             color: rgba(255,255,255,0.9);
         }
         
-        /* Divider */
         .section-divider {
             display: flex;
             align-items: center;
@@ -340,7 +308,6 @@
             letter-spacing: 2px;
         }
         
-        /* Addons Section */
         .addons-section {
             margin-bottom: 30px;
         }
@@ -416,7 +383,6 @@
             color: #888;
         }
         
-        /* Notes Section */
         .notes-section {
             background: #f8f9fa;
             border-radius: 16px;
@@ -468,11 +434,75 @@
             color: #1a1a2e;
         }
         
+        /* Terms Section */
+        .terms-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #fbbf24;
+        }
+        
+        .terms-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .terms-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .term-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 15px;
+            background: rgba(255,255,255,0.7);
+            border-radius: 10px;
+        }
+        
+        .term-number {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .term-text {
+            font-size: 14px;
+            color: #78350f;
+            line-height: 1.6;
+        }
+        
+        .term-text strong {
+            color: #92400e;
+        }
+        
         /* Footer */
         .quote-footer {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             padding: 35px 40px;
             text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
         }
         
         .footer-note {
@@ -494,7 +524,6 @@
             font-size: 13px;
         }
         
-        /* Print Styles */
         @media print {
             body {
                 background: #fff;
@@ -524,6 +553,9 @@
             }
             .package-price {
                 font-size: 32px;
+            }
+            .terms-section {
+                padding: 20px;
             }
         }
     </style>
@@ -832,7 +864,7 @@
                     </div>
                     <div class="note-item">
                         <div class="note-icon">3</div>
-                        <div class="note-text"><strong>עלויות צד ג'</strong> – WhatsApp API, רישיונות, ספקי סליקה (לא כלולות)</div>
+                        <div class="note-text"><strong>עלויות צד ג׳</strong> – WhatsApp API, רישיונות, ספקי סליקה (לא כלולות)</div>
                     </div>
                     <div class="note-item">
                         <div class="note-icon">💡</div>
@@ -840,18 +872,54 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Terms Section -->
+            <div class="terms-section">
+                <div class="terms-title">📜 תנאים והתניות</div>
+                <div class="terms-list">
+                    <div class="term-item">
+                        <div class="term-number">1</div>
+                        <div class="term-text">הצעה זו תקפה למשך <strong>30 יום</strong> ממועד מסירת העתק ממנה ללקוח.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-number">2</div>
+                        <div class="term-text">משרד <strong>מקסאפ – MaxUP</strong> פועל כעוסק פטור, ולכן המחירים המצוינים הם <strong>ללא מע״מ</strong>.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-number">3</div>
+                        <div class="term-text"><strong>תנאי תשלום:</strong> מקדמה 50% בתחילת העבודה, והיתרה (50%) עם השלמת ומסירת כל המשימות.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-number">4</div>
+                        <div class="term-text">התשלום מתבצע <strong>אך ורק באמצעות העברה בנקאית</strong>.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-number">5</div>
+                        <div class="term-text">העלות הסופית היא עלות <strong>חבילה מלאה</strong>.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-number">6</div>
+                        <div class="term-text">במקרה של ביטול ההסכם, הלקוח מתחייב לשלם את עלות השירותים שבוצעו בפועל לפי תמחור פרטני לכל שירות ולא כמחיר חבילה. הסכום ייקבע בעת חתימת הסכם ביטול.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-number">7</div>
+                        <div class="term-text">הלקוח מאשר כי למשרד מקסאפ הזכות להשתמש בתוכן השיווקי שיופק במסגרת תיק העבודות הכללי של המשרד, <strong>ללא הגבלת זמן או מקום</strong>.</div>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- Footer -->
         <div class="quote-footer">
+            <div class="footer-logo">משרד מקסאפ – MaxUP</div>
             <div class="footer-note">
                 <strong>📌 תנאי תשלום:</strong><br>
-                המחירים אינם כוללים מע״מ (17%) • מקדמה 50% בתחילת העבודה<br>
-                זמן אספקה משוער: 7-14 ימי עסקים
+                מקדמה 50% בתחילת העבודה • היתרה עם מסירת הפרויקט<br>
+                תשלום באמצעות העברה בנקאית בלבד
             </div>
             
             <div class="validity">
-                ההצעה תקפה ל-14 ימים מתאריך הנפקתה
+                ההצעה תקפה ל-30 יום ממועד מסירתה ללקוח
             </div>
         </div>
     </div>
